@@ -1,0 +1,182 @@
+home 
+about us 
+contact 
+services 
+safety 
+industrial 
+civil
+
+
+About us
+
+Old mates cranes and rigging offer safe and simple solutions for all your lifting needs.<br/>We want to help get what you want lifted, where you want it lifted, when you want it lifted.<br/>We have a small team of good people that want to help you get it done then get on their way.<br/>Old mates offer the comfort of a zero loss hour safety record and a real want to keep that record with good planning, good people and a good attitude.<br/>Old mate offers crane hire, dogman and riggers as well as electrical spotters and traffic control solutions. We are able to work with you on cost efficient transport solutions.<br/>"Old mate survives and thrives on repeat business that is hard won by keeping things safe and simple, ensuring great value for money and smiles all around".
+
+
+
+services
+
+
+<section className='container-fluid px-0 min-vh-100 parallax' id={services.id}>
+    <section className='container px-0 min-vh-100 d-flex justify-content-center align-items-center'>
+      <article className='col-md-6 text-white'>
+        <h1>{services.copy.title}</h1>
+        {services.copy.list}
+      </article>
+    </section>
+    </section>
+
+
+
+Safety
+
+Keeping it safe and simple is our guiding principle whenever we approach any lift. Be it the first time or the thousandth we ensure it is the safest and most efficient way to complete the lift.<br/>We encourage our crane crew to talk to clients about what it is there lifting, what it does and where it’s going to ensure they are best equipped to tackle the task ahead.
+
+
+
+
+contact us
+We create site specific swims and include them to your as part of docket to help you stay safe and compliant while ensuring our team understands the site and any potential challenges they will face. Our lift studies are created by a team of riggers and engineers to ensure real safe and simple solutions to even the most complex lifts.
+
+Old Mates Cranes & Rigging - instagram
+Old Mates Cranes & Rigging - facebook
+
+
+
+Domestic
+
+
+
+
+
+Old Mates Cranes & Rigging
+Industrial & Manufacturing
+
+Old mates offer the comfort of a zero loss hour safety record and a real want to keep that record with good planning, good people and a good attitude.
+
+If you’re installing, maintaining or removing an assembly, conveyor or processing unit we will ensure we help you get what you need where you need it.
+
+We also offer transport solutions and shutdown packages as well as personal hire and engineering solutions.
+
+
+Civil & Commercial
+
+Old mate is here to assist you with you personal and crane hire solutions.<br/><br/>We are here for whatever you need from panel rotation to facade installation old mates got you covered. We offer hourly hire as well as project rates don’t hesitate to contact us.<br/><br/>Our Cranes are all crane safe inspected and green stickered helping to streamline the process and reduce induction and inspection down time.
+
+
+
+const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+      let handler = () =>{
+        setOpen(false);
+      };
+
+      document.addEventListener('mousedown', handler);
+    }
+  );
+
+
+<button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation'>
+              <span className='navbar-toggler-icon'></span>
+            </button>
+
+<div onClick={()=>{setOpen(!open)}}>hello</div>
+
+<section>
+        <nav className='navbar fixed-top'>
+          <div className='container-fluid'>
+          <a className='navbar-brand' href={logo.href}>
+
+          <img src={logo.url} alt={logo.alt} width={logo.width} />
+          </a>
+          <button className='btn btn-light' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasRight' aria-controls='offcanvasRight'><svg width='40px' height='40px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><g id='SVGRepo_bgCarrier' strokeWidth='0'/><g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'/><g id='SVGRepo_iconCarrier'> <g clipPath='url(#clip0_429_11066)'> <path d='M3 6.00092H21M3 12.0009H21M3 18.0009H21' stroke='#292929' strokeWidth='2.5' strokeLinecap='round' strokeLinejoin='round'/> </g> <defs> <clipPath id='clip0_429_11066'> <rect width='24' height='24' fill='white' transform='translate(0 0.000915527)'/> </clipPath> </defs> </g></svg></button>
+          </div>
+        </nav>
+        <div className='offcanvas offcanvas-end bg-red' tabIndex='-1' id='offcanvasRight' aria-labelledby='offcanvasRightLabel'>
+          <div className='offcanvas-header'>
+            <button type='button' className='btn-close' data-bs-dismiss='offcanvas' aria-label='Close'></button>
+          </div>
+          <div className='offcanvas-body menu-links'>
+            <a href={menu.link1.url}>{menu.link1.copy}</a><br/>
+            <a href={menu.link2.url}>{menu.link2.copy}</a><br/>
+            <a href={menu.link3.url}>{menu.link3.copy}</a><br/>
+            <a href={menu.link4.url}>{menu.link4.copy}</a><br/>
+            <a href={menu.link5.url}>{menu.link5.copy}</a><br/>
+            <a href={menu.link6.url}>{menu.link6.copy}</a><br/>
+            <a href={menu.link7.url}>{menu.link7.copy}</a>
+          </div>
+        </div>
+      </section>
+
+
+ <a className='nav-link'href={menu.link2.url}>{menu.link2.copy}</a>
+              <a href={menu.link3.url}>{menu.link3.copy}</a>
+              <a href={menu.link4.url}>{menu.link4.copy}</a>
+              <a href={menu.link5.url}>{menu.link5.copy}</a>
+              <a href={menu.link6.url}>{menu.link6.copy}</a>
+              <a href={menu.link7.url}>{menu.link7.copy}</a>
+
+
+
+
+
+
+      <nav className='navbar navbar-expand-lg bg-body-tertiary fixed-top'>
+          <div className='container-fluid'>
+          <a className='navbar-brand' href={logo.href}>
+          <img src={logo.url} alt={logo.alt} width={logo.width} />
+          </a>
+          <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation'>
+              <span className='navbar-toggler-icon'></span>
+            </button>
+            <div className='collapse navbar-collapse flex-row-reverse' id='navbarNavAltMarkup'>
+              <div className='navbar-nav menu-links'>
+              <a href={menu.link1.url}>{menu.link1.copy}</a>
+              <a href={menu.link2.url}>{menu.link2.copy}</a>
+              <a href={menu.link3.url}>{menu.link3.copy}</a>
+              <a href={menu.link4.url}>{menu.link4.copy}</a>
+              <a href={menu.link5.url}>{menu.link5.copy}</a>
+              <a href={menu.link6.url}>{menu.link6.copy}</a>
+              <a href={menu.link7.url}>{menu.link7.copy}</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+
+        <nav className='navbar navbar-expand-lg bg-body-tertiary fixed-top' role='navigation'>
+          <div className='container-fluid'>
+            <a className='navbar-brand' href={logo.href}>
+            <img src={logo.url} alt={logo.alt} width={logo.width} />
+            </a>
+            <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+              <span className='navbar-toggler-icon'></span>
+            </button>
+            <div className='collapse navbar-collapse flex-row-reverse' id='navbarSupportedContent'>
+              <div className='navbar-nav mr-auto menu-links'>
+                <li className='nav-item'><a className='nav-link' href={menu.link1.url}>{menu.link1.copy}</a></li>
+                <li className='nav-item'><a className='nav-link  js-scroll-trigger' href={menu.link2.url}>{menu.link2.copy}</a></li>
+                <li className='nav-item'><a className='nav-link' href={menu.link3.url}>{menu.link3.copy}</a></li>
+                <li className='nav-item'><a className='nav-link' href={menu.link4.url}>{menu.link4.copy}</a></li>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+
+
+
+        const handleClick = () =>  (
+		  alert('You clicked me!')
+		)
+
+
+		const Menu = () =>  (
+		  <section>
+		        <button onClick={handleClick}>      Click me</button>
+
+		  </section>
+		)
+
+
+		export default Menu;

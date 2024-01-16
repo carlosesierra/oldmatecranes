@@ -1,0 +1,24 @@
+
+.navbar{height: 70px;}
+.home{padding-top: 70px;height: calc(100% - 70px);height: -o-calc(100% - 70px);height: -webkit-calc(100% - 70px);height: -moz-calc(100% - 70px);}
+.about{ color:  #FFCCF2; font-family: Inter; font-size: 42px; font-style: normal; font-weight: 800; line-height: 1.125em; /* 114% */}
+.arrow img{ height:20px;}
+.w-90{width: 90%;}
+.mw-90{max-width: 90%;}
+.bg-charcoal{background-color: #171C24;}
+.contact{color: #FFF; text-align: center; font-family: Inter; font-style: normal; line-height: normal;}
+.contact .logo img{width: 320px;}
+.contact .title01{font-size: 32px; font-weight: 800; }
+.contact .copy{font-size: 18px;font-weight: 500; line-height: 1.5rem}
+.contact .title02 img{width: 280px;}
+.contact .cta img{width: 160px;}
+.contact .social img{width: 40px;}
+.contact .tnc{font-size: 12px;font-style: normal;font-weight: 400;}
+
+@media only screen and (min-width: 992px) {
+    .arrow{ position: relative; height: 0px; top: -80px;}
+    .about{ font-size: 60px;}
+    .contact .logo img{width: 800px;}
+    .contact .title-01{font-size: 42px; }
+    .contact .copy{font-size: 20px; line-height: 1.75rem}
+}

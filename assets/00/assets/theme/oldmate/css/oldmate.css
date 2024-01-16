@@ -1,0 +1,82 @@
+
+html, body, div, form, ul, li, a, nav, section, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .col-sm-6, .col-sm-3 { border: 0; padding: 0; margin: 0; vertical-align: top; }
+.container-home, .container-home .container-fluid { padding-right: 0!important; padding-left: 0!important; }
+h1,h2,h3,p,a,ul,ol,div,span  { border: 0; padding: 0; margin: 0; font-family: 'Josefin Sans', sans-serif; font-weight: 300; color: #333  font-family: 'Roboto', sans-serif; font-size: 24px; word-break: break-word; z-index: 1; position: relative; }
+a { text-decoration: none;cursor: pointer; }
+ul, ol { list-style-type: disc;  padding: 20px 0 20px 30px }
+h1 { font-size: 70px!important; line-height: 1.5em!important; letter-spacing: 0.1em; padding: 40px 0; font-family: 'PT Sans', sans-serif; }
+h2 { font-size: 40px!important; line-height: 1.5em!important; font-weight: 300!important; padding: 0 0 20px 0; }
+input:focus, textarea:focus, select:focus, button:focus { outline: none!important; }
+
+/*style*/
+.hide, .fadeIn, .fadeSlide{ opacity: 0; }
+.show { opacity: 1; display: block; -webkit-transition: opacity 700ms linear; -moz-transition: opacity 700ms linear; -o-transition: opacity 700ms linear; -ms-transition: opacity 700ms linear; transition: opacity 700ms linear; }
+
+.wp-block-group, .wp-block-cover { width: 100%; padding: 0; display: table; margin: 0; max-width: none; height: calc(100vh); }
+.wp-block-columns { width: 100%; padding: 0; margin-bottom: 0; max-width: none; }
+.wp-block-group__inner-container, .wp-block-cover__inner-container { display: table-cell; vertical-align: middle; padding: 40px!important }
+.cover-padding-none .wp-block-group__inner-container { padding: 0!important }
+
+.wp-block-column { margin-left:0!important }
+.wp-block-image, figure { margin-bottom: 0!important; }
+.wp-block-cover-image.has-background-dim:not(.has-background-gradient):before, .wp-block-cover-image .wp-block-cover__gradient-background, .wp-block-cover.has-background-dim:not(.has-background-gradient):before, .wp-block-cover .wp-block-cover__gradient-background { position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: 1; }
+
+.widget-title { padding: 40px 0 }
+.bgchathamsblue { background-color: #265c6d!important; }
+.bgnone { background-color: inherit!important; }
+.text-chathamsblue{ color: #265c6d!important; }
+
+/*sidebar*/
+.navbar { padding: 0 40px!important; position: fixed; top: 0; -webkit-transition: background-color 500ms linear; -moz-transition: background-color 500ms linear; -o-transition: background-color 500ms linear; -ms-transition: background-color 500ms linear; transition: background-color 500ms linear; }
+.navbar-brand { display: inline-block; float: left; height: 80px; text-align: center; padding: 10px 0; max-width: 300px; }
+.navbar-brand img { max-width: 100%; max-height: 100%; height: auto; width: auto; }
+.sidebar-widget { display: inline-block; float: right; height: 80px; text-align: center; padding: 10px 0; font-size: 14px }
+.navbar-toggler { border: 0 !important; background: transparent !important; }
+.navbar-toggler .top-bar { transform: rotate(45deg); transform-origin: 10% 10%; }
+.navbar-toggler .middle-bar { opacity: 0; }
+.navbar-toggler .bottom-bar { transform: rotate(-45deg); transform-origin: 10% 90%; }
+.navbar-toggler.collapsed .top-bar { transform: rotate(0); }
+.navbar-toggler.collapsed .middle-bar { opacity: 1; }
+.navbar-toggler.collapsed .bottom-bar { transform: rotate(0); }
+.navbar-collapse{ padding-bottom: 20px; }
+.icon-bar { width: 38px; height: 5px; background-color: #ffffff; display: block; transition: all 0.2s; margin-top: 5px }
+.list-group { display: inline-block; background-color: #265c6d; max-width: 340px; }
+ul.menu { display: inline-block; }
+ul.menu li { padding: .5em 0; display: inline-block; width: 100%; text-align: left;font-size: 22px; font-weight: 100; }
+ul.menu li a{ color: #ffffff; }
+
+/*gallery*/
+.gallery{ height: auto;  padding: 40px 0!important }
+
+/*contactform*/
+.wpcf7 { padding: 40px 0 0 0; }
+.wpcf7 p { width: 90%; display: inline-block; padding: 20px 0 0 0; }
+.wpcf7 p label, .wpcf7 p span, .wpcf7 p input.wpcf7-submit { font-size: 24px; line-height: 1.2em; width: 50%; }
+.wpcf7 p input, .wpcf7 p textarea { width: 100%; border: 1px solid #999; padding: .5em 5%; float: none; }
+.wpcf7 p input.wpcf7-submit { float: none; background-color: #265c6d; color:#ffffff; }
+
+.container-footer {  background-color: #265c6d; padding: 20px 40px; display: inline-block; }
+.container-footer div { float: left; }
+.container-footer div p { padding-bottom: 0; margin-bottom: 0; }
+.container-footer div, .container-footer .textwidget p, .container-footer .textwidget a { font-size: 16px; color: #ffffff; }
+
+@media (max-width: 768px) and (min-width: 600px){
+.wp-block-column { flex-basis: 50% !important; }
+}
+@media (max-width: 768px){
+.wpcf7 p label, .wpcf7 p span, .wpcf7 p input.wpcf7-submit { width: 100%; }
+}
+@media (max-width: 414px){
+  .first .has-large-font-size { font-size: 28px !important;  }
+  .first h1 { font-size: 34px !important; }
+  h2 { font-size: 30px !important; }
+.wp-block-group__inner-container, .wp-block-cover__inner-container { padding: 40px 20px !important; }
+  .sidebar { padding: 0 20px !important; }
+}
+@media (max-width: 375px){
+.navbar-brand {  max-width: 200px !important; height: 80px !important; padding-top: 15px !important; }
+.first .has-large-font-size { font-size: 24px !important;  line-height: 1.25; }
+.first h1 { font-size: 30px !important; }
+.first { padding-top: 40px !important }
+.container-footer div, .container-footer .textwidget p, .container-footer .textwidget a { font-size: 14px !important; }
+}

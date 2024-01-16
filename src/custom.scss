@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;700&display=swap');
+*{ font-family: 'Roboto', sans-serif; font-size: 1.125rem;}
+h1,h2,h3,h4{font-family: 'Bebas Neue', sans-serif;}
+h1{ font-size: 3rem;}
+.animate-bottom{position:relative;animation:animatebottom 0.8s}@keyframes animatebottom{from{bottom:-40px;opacity:0} to{bottom:0;opacity:1};}
+.bg-image{background-size:cover; background-position: bottom center; background-repeat: no-repeat; background-image: url('../public/01.jpg');}
+.bg-gradient-white{background-image: linear-gradient(135deg, rgba(255, 255, 255, 1) 5%, rgba(0, 0, 0, 0) 100% );}
+.bg-gradient-black{background-image: linear-gradient(135deg, rgba(0, 0, 0, .25) 5%, rgba(0, 0, 0, .25) 100% ); color: white;}
+.parallax { background-image: none; background-color: #171C24;}
+
+.bg-red{background-color: #be1d2c;}
+.bg-charcoal{background-color: #171C24; color: white;}
+.border-charcoal{border: #171C24 solid 1rem}
+.border-white{border: white solid 1rem}
+.w-90{width: 90%;}
+.mw-90{max-width: 98%;}
+.menu-links a{ color: #171C24; text-decoration: none; font-size: .9rem ; margin: .35em;font-family: 'Bebas Neue', sans-serif;}
+.small, .small a{font-size: .75rem;}
+
+@media only screen and (min-width: 576px) {
+.parallax { background-image: url('../public/03.jpg'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover;background-size: cover; top: 0; }
+}
+
+@media only screen and (min-width: 992px) {
+.mw-90{max-width: 90%;}
+}
+
