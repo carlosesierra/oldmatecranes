@@ -9,8 +9,8 @@ const contact = {
     copy: <>We are based in Melbourne, Victoria, Australia.</>
   },
   email:{
-    email:'info@oldmate.com.au',
-    to:'mailto:info@oldmate.com.au'
+    email:'info@oldmatecranes.com.au',
+    to:'mailto:info@oldmatecranes.com.au'
   }
 };
 
