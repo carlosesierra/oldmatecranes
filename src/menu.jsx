@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+
 
 const logo = {
   alt: 'Old Mate Cranes & Rigging',
@@ -44,48 +44,57 @@ const menu = {
   link9:{
     copy:'contact',
     url:'#contact'
-  }
+  },
+  links: [
+    { href: 'http://oldmatecranes.com.au/', copy: 'home' },
+    { href: '#aboutus', copy: 'about Us' },
+    { href: '#services', copy: 'services' },
+    { href: '#safety', copy: 'safety' },
+    { href: '#social', copy: 'social' },
+    { href: '#domestic', copy: 'domestic' },
+    { href: '#industrial', copy: 'industrial' },
+    { href: '#civil', copy: 'civil' },
+    { href: '#contact', copy: 'contact' }
+],
 };
 
 
 const Menu = () =>  {
 
-  const [show, setShow] = useState(false)
-  const ref = useRef(null)
-  const toggle = () => ( setShow(!show))
 
 return(
     <>
     <nav className='navbar fixed-top bg-body-tertiary shadow' role='navigation'>
     <div className='container-fluid d-flex'>
     <a className='navbar-brand' href={logo.href}><img src={logo.url} alt={logo.alt} width={logo.width} /></a>
-    <div className='col d-none d-md-flex justify-content-end menu-links'>
-            <a href={menu.link1.url}>{menu.link1.copy}</a> 
-            <a href={menu.link2.url}>{menu.link2.copy}</a>
-            <a href={menu.link3.url}>{menu.link3.copy}</a> 
-            <a href={menu.link4.url}>{menu.link4.copy}</a>
-            <a href={menu.link5.url}>{menu.link5.copy}</a> 
-            <a href={menu.link6.url}>{menu.link6.copy}</a>
-            <a href={menu.link7.url}>{menu.link7.copy}</a>
-            <a href={menu.link8.url}>{menu.link8.copy}</a>
-            <a href={menu.link9.url}>{menu.link9.copy}</a>
-    </div>
-    <button className='navbar-toggler d-md-none' type='button' aria-label='Toggle navigation'>
-      <span className='navbar-toggler-icon' onClick={toggle}></span>
-    </button>
-    <div className='navbar-collapse flex-row-reverse'>
-          <div className={`navbar-nav menu-links ${show ? 'show' : ''}`}>
-            <a ref={ref} onClick={toggle} href={menu.link1.url}>{menu.link1.copy}</a> 
-            <a ref={ref} onClick={toggle} href={menu.link2.url}>{menu.link2.copy}</a>
-            <a ref={ref} onClick={toggle} href={menu.link3.url}>{menu.link3.copy}</a> 
-            <a ref={ref} onClick={toggle} href={menu.link4.url}>{menu.link4.copy}</a> 
-            <a ref={ref} onClick={toggle} href={menu.link5.url}>{menu.link5.copy}</a>
-            <a ref={ref} onClick={toggle} href={menu.link6.url}>{menu.link6.copy}</a> 
-            <a ref={ref} onClick={toggle} href={menu.link7.url}>{menu.link7.copy}</a>  
-            <a ref={ref} onClick={toggle} href={menu.link8.url}>{menu.link8.copy}</a>
-            <a ref={ref} onClick={toggle} href={menu.link9.url}>{menu.link9.copy}</a> 
-          </div>
-    </div>
+    <ul className='d-none d-lg-flex p-0 list-unstyled'>
+            {menu.links.map((link, index) => (
+                <li className='nav-item' key={index}  data-bs-dismiss='offcanvas'>
+                <a className='nav-link text-dark pt-3 px-2' href={link.href}>
+                {link.copy}
+                </a>
+                </li>
+            ))}
+        </ul>
+        <button className='d-lg-none navbar-toggler border-0' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasNavbar' aria-controls='offcanvasNavbar' aria-label='Toggle navigation'>
+            <span className='navbar-toggler-icon'></span>
+        </button>
+        <div className='offcanvas offcanvas-end bg-energyyellow' tabIndex={-1} id='offcanvasNavbar' aria-labelledby='offcanvasNavbarLabel'>
+            <div className='offcanvas-header flex-row-reverse' data-bs-theme='light'>
+                <button type='button' className='btn-close' data-bs-dismiss='offcanvas' aria-label='Close'></button>
+            </div>
+            <div className='offcanvas-body'>
+            <ul className='navbar-nav justify-content-end flex-grow-1 pe-3'>
+                {menu.links.map((link, index) => (
+                <li className='nav-item' key={index}  data-bs-dismiss='offcanvas'>
+                <a className='nav-link text-dark' href={link.href}>
+                {link.copy}
+                </a>
+                </li>
+                ))}
+            </ul>
+            </div>
+        </div>
     </div>
     </nav>
     </>
