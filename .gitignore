@@ -28,6 +28,6 @@ pnpm-debug.log*
 *.swp
 
 # Imported site backup packages do not belong in the app repo.
-/assets/**/backup/
+/assets
 /_assets/**/backup/
 /_assets
