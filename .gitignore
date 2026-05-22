@@ -1,0 +1,33 @@
+# Dependencies and generated output
+/node_modules/
+/build/
+/dist/
+/.astro/
+/coverage/
+
+# Local caches and logs
+/.cache/
+/.eslintcache
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files and local deployment state
+.env
+.env.*
+!.env.example
+!.env.*.example
+/.vercel/
+
+# Editor and OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Imported site backup packages do not belong in the app repo.
+/assets/**/backup/
+/_assets/**/backup/
+/_assets

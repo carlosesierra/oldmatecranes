@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Old Mate Cranes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Static marketing site for Old Mate Cranes & Rigging. The live app has been migrated from Create React App to Astro so the page sections render as static HTML with only a small browser script for the mobile navigation menu.
 
-## Available Scripts
+## Stack
 
-In the project directory, you can run:
+- Astro 6 static output
+- Bootstrap CSS and local SCSS styles
+- Public image, icon, manifest, and robots assets in `public/`
+- Vercel deployment headers in `vercel.json`
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js `22.12.0` or newer
+- npm
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Node requirement is recorded in `package.json` and `.nvmrc`.
 
-### `npm test`
+## Local Development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install dependencies:
 
-### `npm run build`
+```sh
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the Astro dev server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+npm run dev
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Astro serves the site locally at `http://localhost:4321/` by default.
 
-### `npm run eject`
+## Validation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Run Astro type and content checks:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm run check
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Build the static site:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+npm run build
+```
 
-## Learn More
+Preview the production build:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm run preview
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The production build is written to `dist/`.
 
-### Code Splitting
+## Project Layout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `src/pages/index.astro` composes the one-page site route.
+- `src/layouts/BaseLayout.astro` owns document metadata, fonts, Bootstrap CSS, and global styles.
+- `src/components/` contains Astro sections for the header, hero, content sections, contact block, and footer.
+- `src/styles/global.scss` contains shared site styling.
+- `public/` contains site assets served from the web root.
 
-### Analyzing the Bundle Size
+## Security And Repository Hygiene
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `.gitignore` excludes dependencies, build output, Astro metadata, environment files, local deployment state, editor files, and imported backup folders.
+- `.github/dependabot.yml` requests weekly npm dependency update pull requests.
+- `vercel.json` applies response headers such as CSP, HSTS, frame restrictions, MIME sniffing protection, permissions policy, and referrer policy.
+- `package.json` includes a narrow npm override for the Astro checker YAML language-server chain so `npm audit --audit-level=moderate` resolves cleanly with the current lockfile.
 
-### Making a Progressive Web App
+Do not commit secrets, `.env` files, generated build output, dependency directories, or imported backup archives.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Deployment
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app is configured as a static Astro site. Vercel can build it with `npm run build` and serve the generated `dist/` output while applying the headers in `vercel.json`.

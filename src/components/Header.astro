@@ -1,0 +1,82 @@
+---
+const links = [
+  { href: 'https://oldmatecranes.com.au/', copy: 'home' },
+  { href: '#aboutus', copy: 'about us' },
+  { href: '#services', copy: 'services' },
+  { href: '#safety', copy: 'safety' },
+  { href: '#social', copy: 'social' },
+  { href: '#domestic', copy: 'domestic' },
+  { href: '#industrial', copy: 'industrial' },
+  { href: '#civil', copy: 'civil' },
+  { href: '#contact', copy: 'contact' }
+];
+---
+
+<nav class="navbar fixed-top bg-body-tertiary shadow" aria-label="Primary">
+  <div class="container-fluid d-flex">
+    <a class="navbar-brand" href="https://oldmatecranes.com.au/">
+      <img src="/logo01.png" alt="Old Mate Cranes & Rigging" width="240" height="66" />
+    </a>
+
+    <ul class="d-none d-lg-flex p-0 list-unstyled">
+      {links.map((link) => (
+        <li class="nav-item">
+          <a class="nav-link text-dark pt-3 px-2" href={link.href}>{link.copy}</a>
+        </li>
+      ))}
+    </ul>
+
+    <button
+      class="d-lg-none navbar-toggler border-0"
+      type="button"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      aria-label="Open navigation"
+      data-menu-toggle
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="mobile-menu d-lg-none" id="mobile-menu" aria-hidden="true" data-mobile-menu>
+      <button class="btn-close" type="button" aria-label="Close navigation" data-menu-close></button>
+      <ul class="navbar-nav">
+        {links.map((link) => (
+          <li class="nav-item">
+            <a class="nav-link text-dark" href={link.href} data-menu-link>{link.copy}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  const closeButton = document.querySelector('[data-menu-close]');
+  const menuLinks = document.querySelectorAll('[data-menu-link]');
+
+  const setMenuState = (isOpen: boolean) => {
+    if (!(toggle instanceof HTMLButtonElement) || !(menu instanceof HTMLElement)) {
+      return;
+    }
+
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    menu.setAttribute('aria-hidden', String(!isOpen));
+    menu.classList.toggle('is-open', isOpen);
+  };
+
+  toggle?.addEventListener('click', () => {
+    setMenuState(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  closeButton?.addEventListener('click', () => setMenuState(false));
+  menuLinks.forEach((link) => link.addEventListener('click', () => setMenuState(false)));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setMenuState(false);
+    }
+  });
+</script>
