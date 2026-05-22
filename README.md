@@ -73,4 +73,4 @@ Do not commit secrets, `.env` files, generated build output, dependency director
 
 ## Deployment
 
-The app is configured as a static Astro site. Vercel can build it with `npm run build` and serve the generated `dist/` output while applying the headers in `vercel.json`.
+The app is configured as a static Astro site. Vercel can build it with `npm run build` and serve the generated `dist/` output while applying the headers in `vercel.json`. The Vercel config pins `dist/` as the output directory so migrated deployments do not reuse Create React App's old `build/` output setting.
